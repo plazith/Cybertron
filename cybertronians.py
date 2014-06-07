@@ -30,7 +30,13 @@ class Autobot(Transformer):
 
 bumblebee = Autobot("Bumblebee", "Volkswagon Beetle")
 starscream = Decepticon("Starscream", "F-15 Eagle")
+shockwave = Decepticon("Shockwave", "Mazda RX-8")
+ratchet = Autobot("Ratchet", "Ambulance")
 
 bumblebee.results()
 print "\n"
 starscream.results()
+print '\n'
+shockwave.results()
+print '\n'
+ratchet.results()
