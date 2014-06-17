@@ -39,6 +39,7 @@ cliffjumper = Autobot("Cliffjumper", "Porsche 924", "Casey Kasem")
 bonecrusher = Decepticon("Bonecrusher", "Bulldozer", "Neil Ross")
 ironhide = Autobot("Ironhide", "Nissan C20 Vanette", "Peter Cullen")
 breakdown = Decepticon("Breakdown", "Lamborghini Countach", "Alan Oppenheimer")
+optimus_prime = Autobot("Optimus Prime", "Kenworth K100 Cabover", "Peter Cullen")
 
 bumblebee.results()
 print
@@ -59,3 +60,5 @@ print
 ironhide.results()
 print
 breakdown.results()
+print
+optimus_prime.results()
