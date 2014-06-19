@@ -50,27 +50,27 @@ class Decepticon(Transformer):
 class Autobot(Transformer):
     morality = "good"
 
-villiage = Village()
-villiage.add(Autobot("Bumblebee", "Volkswagon Beetle", "Dan Gilvezan"))
-villiage.add(Decepticon("Starscream", "F-15 Eagle", "Christopher Collins"))
-villiage.add(Decepticon("Shockwave", "Mazda RX-8", "Corey Burton"))
-villiage.add(Autobot("Ratchet", "Ambulance", "Don Messick"))
-villiage.add(Decepticon("Brawl", "Leopard 1", "Tony St James"))
-villiage.add(Autobot("Jazz", "Porsche 935", "Scatman Crothers"))
-villiage.add(Autobot("Cliffjumper", "Porsche 924", "Casey Kasem"))
-villiage.add(Decepticon("Bonecrusher", "Bulldozer", "Neil Ross"))
-villiage.add(Autobot("Ironhide", "Nissan C20 Vanette", "Peter Cullen"))
-villiage.add(Decepticon("Breakdown", "Lamborghini Countach", "Alan Oppenheimer"))
-villiage.add(Autobot("Optimus Prime", "Kenworth K100 Cabover", "Peter Cullen"))
+village = Village()
+village.add(Autobot("Bumblebee", "Volkswagon Beetle", "Dan Gilvezan"))
+village.add(Decepticon("Starscream", "F-15 Eagle", "Christopher Collins"))
+village.add(Decepticon("Shockwave", "Mazda RX-8", "Corey Burton"))
+village.add(Autobot("Ratchet", "Ambulance", "Don Messick"))
+village.add(Decepticon("Brawl", "Leopard 1", "Tony St James"))
+village.add(Autobot("Jazz", "Porsche 935", "Scatman Crothers"))
+village.add(Autobot("Cliffjumper", "Porsche 924", "Casey Kasem"))
+village.add(Decepticon("Bonecrusher", "Bulldozer", "Neil Ross"))
+village.add(Autobot("Ironhide", "Nissan C20 Vanette", "Peter Cullen"))
+village.add(Decepticon("Breakdown", "Lamborghini Countach", "Alan Oppenheimer"))
+village.add(Autobot("Optimus Prime", "Kenworth K100 Cabover", "Peter Cullen"))
 
-print villiage
+print village
 
 print "Autobots:"
-for autobot in villiage.get_autobots():
+for autobot in village.get_autobots():
     print "\t{0}".format(autobot.name)
 
 print
 
 print "Decepticons:"
-for decepticon in villiage.get_decepticons():
+for decepticon in village.get_decepticons():
     print "\t{0}".format(decepticon.name)
