@@ -67,10 +67,16 @@ print village
 
 print "Autobots:"
 for autobot in village.get_autobots():
-    print "\t{0}".format(autobot.name)
+    print "\t{0:<15} ({1}):\t{2: <16}\t{3}".format(autobot.name,
+                                                   autobot.morality,
+                                                   autobot.vehicle_mode,
+                                                   autobot.voice_actor)
 
 print
 
 print "Decepticons:"
 for decepticon in village.get_decepticons():
-    print "\t{0}".format(decepticon.name)
+    print "\t{0:<15} ({1}):\t{2: <16}\t{3}".format(decepticon.name,
+                                                   decepticon.morality,
+                                                   decepticon.vehicle_mode,
+                                                   decepticon.voice_actor)
