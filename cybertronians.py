@@ -5,7 +5,7 @@ class Village(object):
         self._autobots = []
 
     def __str__(self):
-        return "A Cybertronian Village with {0} Autobots and {1} Decepticons.\n".format(len(self._autobots), len(self._decepticons))
+        return "A Cybertronian Village with {0} Autobot(s) and {1} Decepticon(s).\n".format(len(self._autobots), len(self._decepticons))
 
     def add(self, cybertronian):
         if cybertronian.get_team() == "Autobot":
