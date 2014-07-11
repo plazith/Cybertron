@@ -63,6 +63,7 @@ village.add(Autobot("Ironhide", "Nissan C20 Vanette", "Peter Cullen"))
 village.add(Decepticon("Breakdown", "Lamborghini Countach", "Alan Oppenheimer"))
 village.add(Autobot("Optimus Prime", "Kenworth K100 Cabover", "Peter Cullen"))
 village.add(Decepticon("Vortex", "Sikorsky UH-60 Black Hawk", "Johnny Haymer"))
+village.add(Autobot("Arcee", "Honda S2000", "Susan Blu"))
 
 print village
 
