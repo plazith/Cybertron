@@ -51,21 +51,21 @@ class Autobot(Transformer):
     morality = "good"
 
 village = Village()
-village.add(Autobot("Bumblebee", "Volkswagon Beetle", "Dan Gilvezan"))
-village.add(Decepticon("Starscream", "F-15 Eagle", "Christopher Collins"))
-village.add(Decepticon("Shockwave", "Mazda RX-8", "Corey Burton"))
-village.add(Autobot("Ratchet", "Ambulance", "Don Messick"))
-village.add(Decepticon("Brawl", "Leopard 1", "Tony St James"))
-village.add(Autobot("Jazz", "Porsche 935", "Scatman Crothers"))
-village.add(Autobot("Cliffjumper", "Porsche 924", "Casey Kasem"))
-village.add(Decepticon("Bonecrusher", "Bulldozer", "Neil Ross"))
-village.add(Autobot("Ironhide", "Nissan C20 Vanette", "Peter Cullen"))
-village.add(Decepticon("Breakdown", "Lamborghini Countach", "Alan Oppenheimer"))
-village.add(Autobot("Optimus Prime", "Kenworth K100 Cabover", "Peter Cullen"))
-village.add(Decepticon("Vortex", "Sikorsky UH-60 Black Hawk", "Johnny Haymer"))
-village.add(Autobot("Arcee", "Honda S2000", "Susan Blu"))
-
+f = open('cybertronians.csv', 'r')
+lines = f.readlines()
+for line in lines:
+	line = line.rstrip('\n')
+	line = line.split(',')
+	team = line[0]
+	name = line[1]
+	vehicle_mode = line[2]
+	voice_actor = line[3]
+	if team == "Autobot":
+		village.add(Autobot(name, vehicle_mode, voice_actor))
+	if team == "Decepticon":
+		village.add(Decepticon(name, vehicle_mode, voice_actor))
 print village
+f.close
 
 print "Autobots:"
 for autobot in village.get_autobots():
