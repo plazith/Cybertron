@@ -1,3 +1,5 @@
+import csv
+
 class Village(object):
 
     def __init__(self):
@@ -51,21 +53,18 @@ class Autobot(Transformer):
     morality = "good"
 
 village = Village()
-f = open('cybertronians.csv', 'r')
-lines = f.readlines()
-for line in lines:
-	line = line.rstrip('\n')
-	line = line.split(',')
-	team = line[0]
-	name = line[1]
-	vehicle_mode = line[2]
-	voice_actor = line[3]
-	if team == "Autobot":
-		village.add(Autobot(name, vehicle_mode, voice_actor))
-	if team == "Decepticon":
-		village.add(Decepticon(name, vehicle_mode, voice_actor))
+with open('cybertronians.csv', 'rb') as csvfile:
+	roboreader = csv.reader(csvfile)
+	for row in roboreader:
+		team = row[0]
+		name = row[1]
+		vehicle_mode = row[2]
+		voice_actor = row[3]
+		if team == "Autobot":
+			village.add(Autobot(name, vehicle_mode, voice_actor))
+		if team == "Decepticon":
+			village.add(Decepticon(name, vehicle_mode, voice_actor))
 print village
-f.close
 
 print "Autobots:"
 for autobot in village.get_autobots():
