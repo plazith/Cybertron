@@ -11,10 +11,10 @@ class Village(object):
 
     def add(self, cybertronian):
         if cybertronian.get_team() == "Autobot":
-          self._autobots.append(cybertronian)
+            self._autobots.append(cybertronian)
 
         if cybertronian.get_team() == "Decepticon":
-          self._decepticons.append(cybertronian)
+            self._decepticons.append(cybertronian)
 
     def get_decepticons(self):
         return self._decepticons
@@ -54,16 +54,16 @@ class Autobot(Transformer):
 
 village = Village()
 with open('cybertronians.csv', 'rb') as csvfile:
-	roboreader = csv.reader(csvfile)
-	for row in roboreader:
-		team = row[0]
-		name = row[1]
-		vehicle_mode = row[2]
-		voice_actor = row[3]
-		if team == "Autobot":
-			village.add(Autobot(name, vehicle_mode, voice_actor))
-		if team == "Decepticon":
-			village.add(Decepticon(name, vehicle_mode, voice_actor))
+    roboreader = csv.reader(csvfile)
+    for row in roboreader:
+        team = row[0]
+        name = row[1]
+        vehicle_mode = row[2]
+        voice_actor = row[3]
+        if team == "Autobot":
+            village.add(Autobot(name, vehicle_mode, voice_actor))
+        if team == "Decepticon":
+            village.add(Decepticon(name, vehicle_mode, voice_actor))
 print village
 
 print "Autobots:"
