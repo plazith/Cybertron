@@ -1,6 +1,8 @@
+"""I am creating a Cybertronian village populated by cybertronians.csv"""
 import csv
 
 class Village(object):
+    """I am defining a class to represent the village and assigning it atributes"""
 
     def __init__(self):
         self._decepticons = []
@@ -10,6 +12,7 @@ class Village(object):
         return "A Cybertronian Village with {0} Autobot(s) and {1} Decepticon(s).\n".format(len(self._autobots), len(self._decepticons))
 
     def add(self, cybertronian):
+        """This splits the Cybertronians into two groups based on alignment"""
         if cybertronian.get_team() == "Autobot":
             self._autobots.append(cybertronian)
 
@@ -17,18 +20,22 @@ class Village(object):
             self._decepticons.append(cybertronian)
 
     def get_decepticons(self):
+        """This returns the Decepticon group"""
         return self._decepticons
 
     def get_autobots(self):
+        """This returns the Autobot group"""
         return self._autobots
 
 class Transformer(object):
+    """This class represents individual Cybertronians and their unique characteristics"""
     def __init__(self, name, vehicle_mode, voice_actor):
         self.vehicle_mode = vehicle_mode
         self.name = name
         self.voice_actor = voice_actor
 
     def results(self):
+        """This will print all the information about the Cybertronians"""
         print self.name
         print self.get_team()
         print "{0}\n{1}\n{2}".format(self.vehicle_mode, self.morality, self.voice_actor)
@@ -46,10 +53,12 @@ class Transformer(object):
         return self.__class__.__name__
 
 class Decepticon(Transformer):
+    """This is a class representing the entire group of Decepticons and their shared characteristics"""
     morality = "evil"
 
 
 class Autobot(Transformer):
+    """This is a class representing the entire group of Autobots and their shared characteristics"""
     morality = "good"
 
 village = Village()
