@@ -29,8 +29,8 @@ class Village(object):
 
 class Transformer(object):
     """This class represents individual Cybertronians and their unique characteristics"""
-    def __init__(self, name, vehicle_mode, voice_actor):
-        self.vehicle_mode = vehicle_mode
+    def __init__(self, name, alternate_mode, voice_actor):
+        self.alternate_mode = alternate_mode
         self.name = name
         self.voice_actor = voice_actor
 
@@ -38,7 +38,7 @@ class Transformer(object):
         """This will print all the information about the Cybertronians"""
         print self.name
         print self.get_team()
-        print "{0}\n{1}\n{2}".format(self.vehicle_mode, self.morality, self.voice_actor)
+        print "{0}\n{1}\n{2}".format(self.alternate_mode, self.morality, self.voice_actor)
 
     def get_team(self):
         """Return the name of the instance class
@@ -67,19 +67,19 @@ with open('cybertronians.csv', 'rb') as csvfile:
     for row in roboreader:
         team = row[0]
         name = row[1]
-        vehicle_mode = row[2]
+        alternate_mode = row[2]
         voice_actor = row[3]
         if team == "Autobot":
-            village.add(Autobot(name, vehicle_mode, voice_actor))
+            village.add(Autobot(name, alternate_mode, voice_actor))
         if team == "Decepticon":
-            village.add(Decepticon(name, vehicle_mode, voice_actor))
+            village.add(Decepticon(name, alternate_mode, voice_actor))
 print village
 
 print "Autobots:"
 for autobot in village.get_autobots():
     print "\t{0:<15} ({1}):\t{2: <16}\t{3}".format(autobot.name,
                                                    autobot.morality,
-                                                   autobot.vehicle_mode,
+                                                   autobot.alternate_mode,
                                                    autobot.voice_actor)
 
 print
@@ -88,5 +88,5 @@ print "Decepticons:"
 for decepticon in village.get_decepticons():
     print "\t{0:<15} ({1}):\t{2: <16}\t{3}".format(decepticon.name,
                                                    decepticon.morality,
-                                                   decepticon.vehicle_mode,
+                                                   decepticon.alternate_mode,
                                                    decepticon.voice_actor)
