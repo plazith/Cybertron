@@ -92,6 +92,7 @@ for decepticon in village.get_decepticons():
                                                    decepticon.voice_actor)
 
 class Combiners(object):
+    """This is a class representing transformers that are combiners"""
 
     def __init__(self, name, team, voice_actor, group_name, members):
         self.name = name
@@ -101,9 +102,11 @@ class Combiners(object):
         self._members = members
 
     def add_members(self, member):
+        """This adds a transformer to the list of members the combiner is formed from"""
         self._members.append(member)
 
 def devastate():
+    """This defines a combiner named Devastator and prints his various characteristics"""
     devastator = Combiners("Devastator", "Decepticon", "Arthur Burghardt", "Constructicons", ["Scrapper", "Hook", "Bonecrusher", "Long Haul", "Mixmaster", "Scavenger"])
     print devastator.name
     print devastator.team
