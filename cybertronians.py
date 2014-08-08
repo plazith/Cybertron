@@ -103,7 +103,7 @@ class Combiners(object):
     def add_members(self, member):
         self._members.append(member)
 
-def demo1():
+def devastate():
     devastator = Combiners("Devastator", "Decepticon", "Arthur Burghardt", "Constructicons", ["Scrapper", "Hook", "Bonecrusher", "Long Haul", "Mixmaster", "Scavenger"])
     print devastator.name
     print devastator.team
@@ -111,4 +111,4 @@ def demo1():
     print devastator.group_name
     print devastator._members
 
-demo1()
+devastate()
