@@ -90,3 +90,25 @@ for decepticon in village.get_decepticons():
                                                    decepticon.morality,
                                                    decepticon.alternate_mode,
                                                    decepticon.voice_actor)
+
+class Combiners(object):
+
+    def __init__(self, name, team, voice_actor, group_name, members):
+        self.name = name
+        self.team = team
+        self.voice_actor = voice_actor
+        self.group_name = group_name
+        self._members = members
+
+    def add_members(self, member):
+        self._members.append(member)
+
+def devastate():
+    devastator = Combiners("Devastator", "Decepticon", "Arthur Burghardt", "Constructicons", ["Scrapper", "Hook", "Bonecrusher", "Long Haul", "Mixmaster", "Scavenger"])
+    print devastator.name
+    print devastator.team
+    print devastator.voice_actor
+    print devastator.group_name
+    print devastator._members
+
+devastate()
